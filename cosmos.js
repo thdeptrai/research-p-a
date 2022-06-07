@@ -1,17 +1,19 @@
-// //ATOM
-// async function getbalance() {
-//     const bip39 = require("bip39");
-//     let generatedMnemonic = bip39.generateMnemonic(192);
+//ATOM
+async function getbalance() {
+    const bip39 = require("bip39");
+    let generatedMnemonic = bip39.generateMnemonic(192);
+    generatedMnemonic = "victory snack host dizzy dragon impact piece crawl surprise token vicious tired"
+    const proto_signing = require('@cosmjs/proto-signing')
+    const stargate = require('@cosmjs/stargate')
+    const crypto = require('@cosmjs/crypto')
 
-//     const proto_signing = require('@cosmjs/proto-signing')
-//     const stargate = require('@cosmjs/stargate')
-//     const crypto = require('@cosmjs/crypto')
-
-//     const rpcURL = "http://rpc.laozi1.bandchain.org"
-//     const wallet = await proto_signing.DirectSecp256k1HdWallet.fromMnemonic(generatedMnemonic, {prefix : 'band'});
-
-//     const firstAccount = await wallet.getAccounts();
-//     console.log(firstAccount[0].address)
+    const rpcURL = "http://rpc.laozi1.bandchain.org"
+    
+    const wallet = await proto_signing.DirectSecp256k1HdWallet.fromMnemonic(generatedMnemonic); //options , {prefix : 'band'}
+    const firstAccount = await wallet.getAccounts();
+    
+    console.log(firstAccount);
+    //console.log(wallet.)
 
 
 //     //Get balance
@@ -40,8 +42,8 @@
     
 //   // const txRaw = await client.sign(firstAccount.address, [sendMsg], usedFee, "MSG");
 //   // const txBytes = TxRaw.encode(txRaw).finish();
-// }
-// getbalance()
+}
+getbalance()
 
 
 
@@ -71,14 +73,14 @@ async function sendCoin() {
 
     const gasPrice = GasPrice.fromString("3.14nanolike");
     const gasLimits = {
-    send: 160000,
+        send: 160000,
     };
     const options = { gasPrice: gasPrice, gasLimits: gasLimits };
     
     const client = await SigningStargateClient.connectWithSigner(
-    rpcURL,
-    wallet,
-    options
+        rpcURL,
+        wallet,
+        options
     );
 
     const recipient = "cosmos1xv9tklw7d82sezh9haa573wufgy59vmwe6xxe5";
@@ -97,4 +99,4 @@ async function sendCoin() {
     //assertIsBroadcastTxSuccess(result);
     console.log(result);
 }
-sendCoin();
+//sendCoin();
