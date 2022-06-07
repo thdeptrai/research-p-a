@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "@cosmjs/crypto": "^0.28.4",
+    "@cosmjs/launchpad": "^0.27.1",
+    "@cosmjs/proto-signing": "^0.28.4",
+    "@cosmjs/stargate": "^0.28.4",
+    "@cosmostation/cosmosjs": "^0.9.7",
+    "@elrondnetwork/dapp-core": "^1.2.8",
+    "@elrondnetwork/elrond-core-js": "^2.1.0",
+    "@elrondnetwork/erdjs": "^10.2.5",
+    "@elrondnetwork/erdjs-network-providers": "^0.1.5",
+    "@elrondnetwork/erdjs-walletcore": "^1.0.0",
+    "@ledgerhq/hw-transport-node-hid": "^6.27.1",
+    "@ledgerhq/hw-transport-webhid": "^6.27.1",
+    "@polkadot/api": "^8.7.1",
+    "@taquito/signer": "^12.1.1",
+    "@taquito/taquito": "^12.1.1",
+    "@terra-money/terra.js": "^3.1.2",
+    "axios": "^0.27.2",
+    "bip32": "^3.0.1",
+    "bip39": "^3.0.4",
+    "bitcoinjs-lib": "^6.0.1",
+    "ecpair": "^2.0.1",
+    "i": "^0.3.7",
+    "near-api-js": "^0.44.2",
+    "near-seed-phrase": "^0.2.0",
+    "npm": "^8.12.1",
+    "tronweb": "^4.2.0"
+  }
+}
