@@ -6,6 +6,7 @@ async function MultiwalletCreation (){
     const seed = await bip39.mnemonicToSeed(
         "victory snack host dizzy dragon impact piece crawl surprise token vicious tired"
     );
+    
     const root = bip32.fromSeed(seed);
     //Cosmos
     for (let i = 0; i < 20; i++) {
@@ -23,10 +24,15 @@ async function MultiwalletCreation (){
         const { address } = bitcoin.payments.p2wpkh({
             pubkey: child.publicKey,
         })
-        console.log(address)
+        //console.log(address)
     }
     //
-
+    const seed64 = await bip39.mnemonicToSeed("victory snack host dizzy dragon impact piece crawl surprise token vicious tired")
+    for (let i = 0; i < 1; i++) {
+        const solWeb3 = require("@solana/web3.js")
+        const account = solWeb3.Keypair.fromSeed(seed64)
+        console.log(account)
+    }
 
 
 

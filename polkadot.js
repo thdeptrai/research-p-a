@@ -43,7 +43,6 @@ async function test(){
                 console.log(error.toString());
               }
             });
-            
         }
         if(status.isFinalized){
             //get the final tx to check

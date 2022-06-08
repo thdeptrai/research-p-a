@@ -13,6 +13,7 @@
     "@ledgerhq/hw-transport-node-hid": "^6.27.1",
     "@ledgerhq/hw-transport-webhid": "^6.27.1",
     "@polkadot/api": "^8.7.1",
+    "@solana/web3.js": "^1.43.6",
     "@taquito/signer": "^12.1.1",
     "@taquito/taquito": "^12.1.1",
     "@terra-money/terra.js": "^3.1.2",
