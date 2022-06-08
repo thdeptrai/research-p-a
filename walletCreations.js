@@ -26,12 +26,16 @@ async function MultiwalletCreation (){
         })
         //console.log(address)
     }
-    //
-    const seed64 = await bip39.mnemonicToSeed("victory snack host dizzy dragon impact piece crawl surprise token vicious tired")
-    for (let i = 0; i < 1; i++) {
+    //Solana
+    for (let i = 0; i < 20; i++) {
         const solWeb3 = require("@solana/web3.js")
-        const account = solWeb3.Keypair.fromSeed(seed64)
-        console.log(account)
+        const seedBuffer = Buffer.from(seed).toString('hex');
+        const path44Change = `m/44'/501'/${i}'/0'`;
+        const { derivePath } = require('ed25519-hd-key');
+
+        const derivedSeed = derivePath(path44Change, seedBuffer).key;
+        const keypair =  solWeb3.Keypair.fromSeed(derivedSeed)
+        console.log(keypair.publicKey.toBase58())
     }
 
 
